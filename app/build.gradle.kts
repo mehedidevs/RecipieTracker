@@ -2,13 +2,13 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
 }
 
 
 android {
     namespace = "com.mehedi.riderrecipe"
     compileSdk = ProjectConfig.compileSdk
-
     defaultConfig {
         minSdk = ProjectConfig.minSdk
         targetSdk = ProjectConfig.targetSdk
@@ -67,4 +67,5 @@ dependencies {
 
     //Modules
     implementation(project(Modules.auth))
+
 }

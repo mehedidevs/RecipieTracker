@@ -1,6 +1,5 @@
-
 android {
-    compileSdk= ProjectConfig.compileSdk
+    compileSdk = ProjectConfig.compileSdk
 
     defaultConfig {
         minSdk ProjectConfig.minSdk
@@ -54,4 +53,22 @@ dependencies {
     //TEST
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.test.androidx.junit)
+
+    //ROOM
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+    //HILT
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    //MOSHI
+    implementation(libs.moshi.kotlin)
+    ksp(libs.moshi.codegen)
+
+    //RETROFIT
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter.moshi)
+    implementation(libs.okhttp.core)
+    implementation(libs.okhttp.logging)
 }
