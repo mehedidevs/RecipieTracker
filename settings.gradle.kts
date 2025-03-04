@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "RiderRecipe"
 include(":app")
+include(":auth")
